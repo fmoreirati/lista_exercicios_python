@@ -13,10 +13,24 @@ abastecimento = int(input("Número de abastecimentos desejados? ")) #2
 consumo = float(input("Consumo de combustível do carro (em Km/L)? ")) #10 
 
 #processamento
-kmTotal = (comprimento / 1000) * voltas
-consumoTotal = kmTotal / consumo
-litros = consumoTotal / abastecimento
+# kmTotal = (comprimento / 1000) * voltas
+# consumoTotal = kmTotal / consumo
+# litros = consumoTotal / abastecimento
+
+def calculoListros():
+    kmTotal = (comprimento / 1000) * voltas
+    consumoTotal = kmTotal / consumo
+    return consumoTotal / abastecimento
 
 #saida
-print("O número mínimo de litros necessários até o primeiro reabastecimento: ", litros)
+print("O número mínimo de litros necessários até o primeiro reabastecimento: ", calculoListros())
 
+
+def calculoListros(comprimento, voltas, consumo, abastecimento):
+    kmTotal = (comprimento / 1000) * voltas
+    consumoTotal = kmTotal / consumo
+    return consumoTotal / abastecimento
+
+
+print ("Carro 1:", calculoListros(2000, 10, 14, 3))
+print ("Carro 2:", calculoListros(6000, 30, 5, 10))
