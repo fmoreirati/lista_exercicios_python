@@ -9,35 +9,20 @@ valor3 = int(input("Digite o terceiro valor?")) # 7
 resposta = ""
 valorTemp = 0
 
-def trocaNumeros(valorOrigin, valorDestino):
-    valorTemp = valorDestino
-    valorDestino = valorOrigin
-    valorOrigin = valorTemp    
-    return [valorOrigin, valorDestino]
-
 if( valor1 > valor2 ):
-    resposta = trocaNumeros(valor1, valor2)
-    valor1 = resposta[0]
-    valor2 = resposta[1] 
-    # valorTemp = valor2
-    # valor2 = valor1
-    # valor1 = valorTemp
+    valorTemp = valor2
+    valor2 = valor1
+    valor1 = valorTemp
     
 if( valor1 > valor3 ):
-    resposta = trocaNumeros(valor1, valor3)
-    valor1 = resposta[0]
-    valor3 = resposta[1] 
-    # valorTemp = valor3
-    # valor3 = valor1
-    # valor1 = valorTemp
+    valorTemp = valor3
+    valor3 = valor1
+    valor1 = valorTemp
 
-if( valor2 > valor3 ):
-    resposta = trocaNumeros(valor2, valor3)
-    valor2 = resposta[0]
-    valor3 = resposta[1] 
-    # valorTemp = valor3
-    # valor3 = valor2
-    # valor2 = valorTemp
+if( valor2 > valor3 ): 
+    valorTemp = valor3
+    valor3 = valor2
+    valor2 = valorTemp
 
 # saida
 print(valor1, valor2, valor3)
