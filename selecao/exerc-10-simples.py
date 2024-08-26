@@ -12,8 +12,8 @@ valorTemp = 0
 if( valor1 > valor2 ):
     valorTemp = valor2
     valor2 = valor1
-    valor1 = valorTemp
-    
+    valor1 = valorTemp 
+
 if( valor1 > valor3 ):
     valorTemp = valor3
     valor3 = valor1
